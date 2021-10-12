@@ -5,6 +5,7 @@
   background-color: $backgroundColor;
   max-width: 580px;
   display: flex;
+  align-items: flex-start;
 }
 
 .avatar {
@@ -34,7 +35,7 @@
     color: $subheadColor;
     cursor: pointer;
   }
-  
+
   .datetime:hover {
     text-decoration: underline;
   }
@@ -42,11 +43,11 @@
 }
 
 .content {
-  width: 500px;
+  width: fit-content;
 }
 
 .tweet_image {
-  width: 500px;
+  width: $imageWidth;
   height: 100%;
   margin-top: 12px;
   border-radius: $componentBorderRadius;
@@ -60,27 +61,33 @@
   margin-top: 5px;
 }
 
+.icon {
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 50%;
+  transition: all 0.15s;
+  path {
+    fill: $subheadColor;
+  }
+  circle {
+    fill: $subheadColor;
+  }
+}
+
 .actionbar {
   color: $subheadColor;
   display: flex;
   justify-content: flex-start;
 
-  .icon {
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-    margin-right: 5px;
-    border-radius: 50%;
-    path {
-      fill: $subheadColor;
-    }
-  }
 
   .action_button {
     display: flex;
     align-items: center;
     margin-right: 5rem;
     cursor: pointer;
+    transition: all 0.2s;
   }
 
   span {

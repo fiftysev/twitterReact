@@ -1,8 +1,14 @@
 body {
+  background-color: black;
   margin: 0;
   font-family: "Helvetica";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  display: flex;
+  align-items: center;
 }
 
 code {

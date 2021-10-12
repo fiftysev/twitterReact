@@ -1,0 +1,33 @@
+@import "../../variables.scss";
+
+.container {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem;
+  border-radius: 100px;
+  transition: all .2s;
+  &:hover {
+    background-color: rgba($color: #ffffff, $alpha: 0.1);
+  }
+}
+
+.normal {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.icon {
+  filter: invert(360);
+  margin-right: 1rem;
+  width: 24px;
+  height: 24px;
+}
+
+.title {
+  color: $foregroundColor;
+  font-size: 1.2rem;
+}

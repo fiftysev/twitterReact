@@ -1,0 +1,19 @@
+@import "../../variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: max-content;
+}
+
+.button {
+  padding: 0.8rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: $foregroundColor;
+  background-color: $twitterBlue;
+  border: none;
+  box-shadow: none;
+  border-radius: 100px;
+  text-align: center;
+}
