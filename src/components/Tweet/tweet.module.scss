@@ -3,9 +3,9 @@
 .container {
   padding: 16px;
   background-color: $backgroundColor;
-  max-width: 580px;
   display: flex;
   align-items: flex-start;
+  flex-grow: 1;
 }
 
 .avatar {

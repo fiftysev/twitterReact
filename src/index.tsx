@@ -4,9 +4,13 @@ import Sidebar from './components/Sidebar/Sidebar';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Tweet from './components/Tweet/Tweet';
-import userAvatar from './img/tweetAuthor.png';
-import tweetImage from './img/test.jpeg';
 import TweetCreateForm from "./components/TweetCreateForm/TweetCreateForm";
+import ProfileHeader from "./components/ProfileHeader/ProfileHeader";
+
+import tweetImage from './img/test.jpeg';
+import userAvatar from './img/tweetAuthor.png';
+import profileAvatar from './img/profileAvatar.jpg';
+import profileBackground from './img/backgroundProfile.jpeg';
 
 
 ReactDOM.render(
@@ -14,6 +18,16 @@ ReactDOM.render(
     <div className="container">
       <Sidebar />
       <div className="feed">
+          <ProfileHeader
+              name={"Ведомости"}
+              username={"@Vedomosti"}
+              locationCountry={"Россия"}
+              dateJoined={"февраль 2009"}
+              followingCount={"31"}
+              followersCount={"728,3 тыс."}
+              profileAvatar={profileAvatar}
+              profileBackground={profileBackground}
+          />
           <TweetCreateForm placeholderText={"Что происходит?"} userAvatar={userAvatar}/>
           <Tweet
             authorAvatar={userAvatar}

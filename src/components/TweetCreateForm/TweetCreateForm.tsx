@@ -1,4 +1,4 @@
-import styles from "./tweetcreate.module.scss";
+import styles from './tweetcreate.module.scss';
 
 type TweetFormProps = {
     placeholderText: string;
@@ -9,7 +9,7 @@ const TweetCreateForm = (props: TweetFormProps) => (
     <div className={styles.container}>
         <img src={props.userAvatar} alt="avatar" className={styles.avatar}/>
         <div className={styles.content}>
-            <input type="text" placeholder={props.placeholderText} className={styles.input}/>
+            <textarea placeholder={props.placeholderText} className={styles.input}/>
             <div className={styles.actionbar}>
                 <div className={styles.action_button}>
                     <svg viewBox="0 0 24 24" aria-hidden="true"

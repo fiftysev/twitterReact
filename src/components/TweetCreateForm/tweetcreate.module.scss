@@ -1,9 +1,9 @@
 @import "../../variables";
 
 .container {
-  width: 100%;
   display: flex;
   align-items: flex-start;
+  flex-grow: 1;
   padding: 16px;
 }
 
@@ -14,18 +14,19 @@
 }
 
 .input {
-  flex: 1 0 auto;
   height: 36px;
   margin-left: 12px;
   background-color: transparent;
-  color: $foregroundColor;
+  color: $subheadColor;
+  resize: none;
   font-size: 1.2rem;
   outline: none;
+  border: none;
+  font-family: inherit;
   &:focus {
     outline: none;
   }
 }
-
 
 .avatar {
   width: 48px;
@@ -35,10 +36,9 @@
 
 .actionbar {
   padding: 12px;
-  position: relative;
   display: flex;
   align-items: center;
-  flex: 1 0 auto;
+  flex-grow: 1;
 }
 
 .action_button {
@@ -50,8 +50,7 @@
 }
 
 .tweet_button {
-  position: absolute;
-  right: 0;
+  margin-left: auto;
   cursor: pointer;
   padding: 10px 1rem;
   font-size: 1rem;

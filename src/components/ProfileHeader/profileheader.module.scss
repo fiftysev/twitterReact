@@ -1,0 +1,23 @@
+@import "../../variables";
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+}
+
+.avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid black;
+  margin-left: 25px;
+  z-index: 2;
+  transform: translateY(-75px);
+}
