@@ -1,7 +1,7 @@
 body {
   background-color: black;
   margin: 0;
-  font-family: "Helvetica";
+  font-family: "Helvetica", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -9,6 +9,12 @@ body {
 .container {
   display: flex;
   align-items: center;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
 }
 
 code {
