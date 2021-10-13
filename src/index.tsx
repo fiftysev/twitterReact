@@ -21,6 +21,8 @@ ReactDOM.render(
           <ProfileHeader
               name={"Ведомости"}
               username={"@Vedomosti"}
+              description={'Официальный аккаунт делового издания «Ведомости»'}
+              websiteLink={'vedomosti.ru'}
               locationCountry={"Россия"}
               dateJoined={"февраль 2009"}
               followingCount={"31"}

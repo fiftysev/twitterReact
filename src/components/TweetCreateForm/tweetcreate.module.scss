@@ -44,9 +44,15 @@
 .action_button {
   width: 24px;
   height: 24px;
+  border-radius: 50%;
   padding: 5px;
   margin-right: 5px;
   fill: $twitterBlue;
+  transition: all .2ms;
+  &:hover {
+    background-color: $twitterBlueAlpha;
+    cursor: pointer;
+  }
 }
 
 .tweet_button {
