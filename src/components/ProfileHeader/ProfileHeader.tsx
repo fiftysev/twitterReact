@@ -26,7 +26,7 @@ const ProfileHeader = (props: ProfileHeaderProps) => (
             <span className={styles.description}> {props.description} </span>
 
             <div className={styles.additional_info}>
-                <span className={styles.country}>
+                <span className={`${styles.country} ${props.locationCountry?.length === 0 ? styles.invisible : styles.visible}`}>
                     <svg viewBox="0 0 24 24" aria-hidden="true"
                          className="r-9ilb82 r-4qtqp9 r-yyyyoo r-1xvli5t r-1d4mawv r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><path
     d="M12 14.315c-2.088 0-3.787-1.698-3.787-3.786S9.913 6.74 12 6.74s3.787 1.7 3.787 3.787-1.7 3.785-3.787 3.785zm0-6.073c-1.26 0-2.287 1.026-2.287 2.287S10.74 12.814 12 12.814s2.287-1.025 2.287-2.286S13.26 8.24 12 8.24z"/><path
@@ -34,7 +34,7 @@ const ProfileHeader = (props: ProfileHeaderProps) => (
                     </svg>
                     {props.locationCountry}
                 </span>
-                <span className={styles.website}>
+                <span className={`${styles.website} ${props.websiteLink?.length === 0 ? styles.invisible : styles.visible}`}>
                     <svg viewBox="0 0 24 24" aria-hidden="true"
                          className="r-9ilb82 r-4qtqp9 r-yyyyoo r-1xvli5t r-1d4mawv r-dnmrzs r-bnwqim r-1plcrui r-lrvibr">
                         <path
@@ -43,7 +43,7 @@ const ProfileHeader = (props: ProfileHeaderProps) => (
                          </svg>
                     <a href="google.com">{props.websiteLink}</a>
                 </span>
-                <span className={styles.joined_date}>
+                <span className={`${styles.joined_date} ${props.dateJoined?.length === 0 ? styles.invisible : styles.visible}`}>
                     <svg viewBox="0 0 24 24" aria-hidden="true"
                          className="r-9ilb82 r-4qtqp9 r-yyyyoo r-1xvli5t r-1d4mawv r-dnmrzs r-bnwqim r-1plcrui r-lrvibr">
                         <path
