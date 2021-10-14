@@ -11,6 +11,7 @@ import tweetImage from './img/test.jpeg';
 import userAvatar from './img/tweetAuthor.png';
 import profileAvatar from './img/profileAvatar.jpg';
 import profileBackground from './img/backgroundProfile.jpeg';
+import ActualSidebar from "./components/ActualSidebar/ActualSidebar";
 
 
 ReactDOM.render(
@@ -45,6 +46,13 @@ ReactDOM.render(
             commentsCount={8}
           />
       </div>
+      <ActualSidebar
+          firstPlace={['Музыка', 'Juice WRLD', '127 тыс.']}
+          secondPlace={['Знаменитости', 'Илон Маск', '7898']}
+          thirdPlace={['Тренды', 'YEEZY']}
+          fourthPlace={['Спорт', 'Майк Тайсон', '1,83 млн.']}
+          fifthPlace={['Популярное', 'Tатарстан']}
+      />
     </div>
   </React.StrictMode>,
   document.getElementById('root')

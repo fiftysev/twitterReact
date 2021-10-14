@@ -1,0 +1,61 @@
+@import '../../variables';
+
+.container {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  color: $foregroundColor;
+  background-color: $dimmedBackgroundColor;
+  border-radius: $componentBorderRadius;
+  margin-top: 1rem;
+}
+
+.title {
+  margin-left: 16px;
+}
+
+.element {
+  padding: 16px;
+  flex-grow: 1;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.subhead_text {
+  display: block;
+  color: $subheadColor;
+}
+
+.element_title {
+  display: block;
+  margin: 0.5rem 0;
+  color: $foregroundColor;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.search_container {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  background-color: $dimmedBackgroundColor;
+  border-radius: 100px;
+  svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+  }
+  path {
+    fill: $subheadColor;
+  }
+  .input_field {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 24px;
+    color: $foregroundColor;
+  }
+}
