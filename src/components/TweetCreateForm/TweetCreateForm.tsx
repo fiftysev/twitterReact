@@ -10,11 +10,11 @@ type TweetFormProps = {
     userAvatar: string;
 }
 
-const TweetCreateForm = (props: TweetFormProps) => (
+const TweetCreateForm = ({ placeholderText, userAvatar }: TweetFormProps) => (
     <div className={styles.container}>
-        <img src={props.userAvatar} alt="avatar" className={styles.avatar} />
+        <img src={userAvatar} alt="avatar" className={styles.avatar} />
         <div className={styles.content}>
-            <textarea placeholder={props.placeholderText} className={styles.input} />
+            <textarea placeholder={placeholderText} className={styles.input} />
             <div className={styles.actionbar}>
                 <div className={styles.action_button}>
                     <ImageIcon />

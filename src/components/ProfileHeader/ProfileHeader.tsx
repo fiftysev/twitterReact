@@ -16,30 +16,44 @@ type ProfileHeaderProps = {
     profileBackground: string;
 }
 
-const ProfileHeader = (props: ProfileHeaderProps) => (
-    <div className={styles.container}>
-        <img src={props.profileBackground} alt="background" className={styles.background} />
-        <img src={props.profileAvatar} alt="avatar" className={styles.avatar} />
+const ProfileHeader = (props: ProfileHeaderProps) => {
+    const {
+        name,
+        username,
+        description,
+        locationCountry,
+        websiteLink,
+        dateJoined,
+        followingCount,
+        followersCount,
+        profileAvatar,
+        profileBackground
+    } = props;
+    return (
+        <div className={styles.container}>
+            <img src={profileBackground} alt="background" className={styles.background} />
+            <img src={profileAvatar} alt="avatar" className={styles.avatar} />
 
-        <button className={styles.follow_button}>Читать</button>
+            <button className={styles.follow_button}>Читать</button>
 
-        <div className={styles.text_container}>
-            <h2 className={styles.name} > {props.name} </h2>
-            <span className={styles.username} > {props.username} </span>
-            <span className={styles.description}> {props.description} </span>
+            <div className={styles.text_container}>
+                <h2 className={styles.name} > {name} </h2>
+                <span className={styles.username} > {username} </span>
+                <span className={styles.description}> {description} </span>
 
-            <div className={styles.additional_info}>
-                {props.locationCountry && <span className={styles.country}> <MapIcon /> {props.locationCountry}</span>}
-                {props.websiteLink && <span className={styles.website}> <LinkIcon /> <a href="google.com">{props.websiteLink}</a> </span>}
-                {props.dateJoined && <span className={styles.joined_date}> <DateIcon /> Регистрация: {props.dateJoined} </span>}
-            </div>
-            <div className={styles.followers_info}>
-                <span className={styles.following}><b>{props.followingCount}</b> в читаемых</span>
-                <span><b>{props.followersCount}</b> читателей</span>
+                <div className={styles.additional_info}>
+                    {locationCountry && <span className={styles.country}> <MapIcon /> {locationCountry}</span>}
+                    {websiteLink && <span className={styles.website}> <LinkIcon /> <a href="google.com">{websiteLink}</a> </span>}
+                    {dateJoined && <span className={styles.joined_date}> <DateIcon /> Регистрация: {dateJoined} </span>}
+                </div>
+                <div className={styles.followers_info}>
+                    <span className={styles.following}><b>{followingCount}</b> в читаемых</span>
+                    <span><b>{followersCount}</b> читателей</span>
+                </div>
             </div>
         </div>
-    </div>
-);
+    )
+};
 
 export default ProfileHeader;
 
