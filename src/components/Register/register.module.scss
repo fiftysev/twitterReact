@@ -1,0 +1,69 @@
+@import '../../variables';
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: auto;
+  background-image: url("../../img/backgroundSign.png");
+}
+
+.icon_twi {
+  svg {
+    margin: auto;
+    width: 25vw;
+    height: auto;
+  }
+}
+
+.icon {
+  svg {
+    margin: auto;
+    width: 3rem;
+    height: auto;
+  }
+}
+
+.fields {
+  padding: 2rem;
+}
+
+.title {
+  color: $foregroundColor;
+  font-size: 4rem;
+}
+
+.fields_form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem
+}
+
+.field {
+  padding: 0 16px;
+  background-color: transparent;
+  color: $foregroundColor;
+  border: 1px solid $subheadColor;
+  height: 3rem;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.submit_btn {
+  padding: 0 16px;
+  height: 3rem;
+  background-color: $twitterBlue;
+  border: none;
+  border-radius: 100px;
+  color: $foregroundColor;
+  font-weight: bold;
+  font-size: 1.2rem;
+}

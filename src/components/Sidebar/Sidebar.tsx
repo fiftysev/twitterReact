@@ -1,21 +1,29 @@
-import styles from "./sidebar.module.scss"
+import styles from "./sidebar.module.scss";
+import {Link} from 'react-router-dom';
 import SidebarElement from "./SidebarElement";
+import TwitterIcon from "../Icons/TwitterIcon";
 
 
 type SidebarProps = {
-  listOfItems: Array<{ elementIcon: string, elementTitle: string }>
+  listOfItems: Array<{ elementIcon: string, elementTitle: string, pathTitle: string}>
 }
 
 
 const Sidebar = ({ listOfItems }: SidebarProps) => {
-  const menuItems = listOfItems.map((value) =>
-    <SidebarElement elementIcon={value.elementIcon} elementTitle={value.elementTitle} />
+  const menuItems = listOfItems.map((value) => (
+      <Link to={value.pathTitle}>
+          <SidebarElement elementIcon={value.elementIcon} elementTitle={value.elementTitle} />
+      </Link>
+      )
   )
   return (
-    <div className={styles.container}>
-      {menuItems};
-      <button className={styles.button}>Твитнуть</button>
-    </div>
+        <div className={styles.container}>
+          <div className="icon">
+            <TwitterIcon />
+          </div>
+          {menuItems};
+          <button className={styles.button}>Твитнуть</button>
+        </div>
   )
 }
 

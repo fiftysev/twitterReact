@@ -1,13 +1,15 @@
 @import '../../variables';
 
 .container {
+  position: sticky;
+  top: 0;
   width: 350px;
   display: flex;
   flex-direction: column;
   color: $foregroundColor;
   background-color: $dimmedBackgroundColor;
   border-radius: $componentBorderRadius;
-  margin-top: 1rem;
+  margin: 1rem 35px;
 }
 
 .title {
@@ -36,6 +38,7 @@
 }
 
 .search_container {
+  margin: 0 35px;
   padding: 16px;
   display: flex;
   align-items: center;

@@ -1,9 +1,13 @@
 @import "../../variables";
 
 .container {
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
   display: flex;
+  width: max-content;
   flex-direction: column;
-  width: fit-content;
+  padding: 0 35px;
 }
 
 .button {
@@ -17,4 +21,13 @@
   box-shadow: none;
   border-radius: 100px;
   text-align: center;
+}
+
+.icon {
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  path {
+    fill: $foregroundColor;
+  }
 }
