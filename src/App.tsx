@@ -17,7 +17,8 @@ import profileBackground from './img/backgroundProfile.jpeg';
 
 import Layout from "./Layout";
 import Feed from "./Feed";
-import Register from "./components/Register/Register";
+import SignUp from "./components/Sign/SignUp";
+import SignIn from "./components/Sign/SignIn";
 
 
 const App = () => (
@@ -94,7 +95,10 @@ const App = () => (
         </Layout>
       </Route>
       <Route path={"/register"}>
-        <Register/>
+        <SignUp/>
+      </Route>
+      <Route path={"/login"}>
+        <SignIn/>
       </Route>
       <Route path={"/"}>
         <Layout>

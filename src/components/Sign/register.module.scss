@@ -55,15 +55,27 @@
   border-radius: 5px;
   font-weight: bold;
   font-size: 1.1rem;
+  &:focus {
+    outline: 1px solid $twitterBlue;
+  }
 }
 
 .submit_btn {
+  margin: auto;
+  width: 80%;
   padding: 0 16px;
-  height: 3rem;
+  height: 4rem;
   background-color: $twitterBlue;
   border: none;
   border-radius: 100px;
   color: $foregroundColor;
   font-weight: bold;
   font-size: 1.2rem;
+}
+
+.already_exist {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: auto;
 }

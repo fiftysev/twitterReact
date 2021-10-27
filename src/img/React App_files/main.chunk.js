@@ -69,7 +69,7 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 /***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/Register/register.module.scss":
 /*!**********************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-7-1!./node_modules/postcss-loader/src??postcss!./node_modules/resolve-url-loader??ref--5-oneOf-7-3!./node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-7-4!./src/components/Register/register.module.scss ***!
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-7-1!./node_modules/postcss-loader/src??postcss!./node_modules/resolve-url-loader??ref--5-oneOf-7-3!./node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-7-4!./src/components/SignUp/register.module.scss ***!
   \**********************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -88,7 +88,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_img_backgroundSign_png__WEBPACK_IMPORTED_MODULE_2__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".register_container__1j-3H {\n  display: flex;\n  width: 100%;\n  height: 100vh; }\n\n.register_background__2xZ9a {\n  width: 50%;\n  height: auto;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); }\n\n.register_icon_twi__2ayYT {\n  margin: auto;\n  flex: 1 1; }\n  .register_icon_twi__2ayYT svg {\n    width: 250px;\n    height: auto; }\n", "",{"version":3,"sources":["webpack://src/components/Register/register.module.scss"],"names":[],"mappings":"AAEA;EACE,aAAa;EACb,WAAW;EACX,aAAa,EAAA;;AAGf;EACE,UAAU;EACV,YAAY;EACZ,yDAAqD,EAAA;;AAGvD;EACE,YAAY;EACZ,SAAO,EAAA;EAFT;IAII,YAAY;IACZ,YAAY,EAAA","sourcesContent":["@import '../../variables';\n\n.container {\n  display: flex;\n  width: 100%;\n  height: 100vh;\n}\n\n.background {\n  width: 50%;\n  height: auto;\n  background-image: url(\"../../img/backgroundSign.png\");\n}\n\n.icon_twi {\n  margin: auto;\n  flex: 1;\n  svg {\n    width: 250px;\n    height: auto;\n  }\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".register_container__1j-3H {\n  display: flex;\n  width: 100%;\n  height: 100vh; }\n\n.register_background__2xZ9a {\n  width: 50%;\n  height: auto;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); }\n\n.register_icon_twi__2ayYT {\n  margin: auto;\n  flex: 1 1; }\n  .register_icon_twi__2ayYT svg {\n    width: 250px;\n    height: auto; }\n", "",{"version":3,"sources":["webpack://src/components/SignUp/register.module.scss"],"names":[],"mappings":"AAEA;EACE,aAAa;EACb,WAAW;EACX,aAAa,EAAA;;AAGf;EACE,UAAU;EACV,YAAY;EACZ,yDAAqD,EAAA;;AAGvD;EACE,YAAY;EACZ,SAAO,EAAA;EAFT;IAII,YAAY;IACZ,YAAY,EAAA","sourcesContent":["@import '../../variables';\n\n.container {\n  display: flex;\n  width: 100%;\n  height: 100vh;\n}\n\n.background {\n  width: 50%;\n  height: auto;\n  background-image: url(\"../../img/backgroundSign.png\");\n}\n\n.icon_twi {\n  margin: auto;\n  flex: 1;\n  svg {\n    width: 250px;\n    height: auto;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": "register_container__1j-3H",
@@ -271,7 +271,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _img_backgroundProfile_jpeg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./img/backgroundProfile.jpeg */ "./src/img/backgroundProfile.jpeg");
 /* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Layout */ "./src/Layout.tsx");
 /* harmony import */ var _Feed__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Feed */ "./src/Feed.tsx");
-/* harmony import */ var _components_Register_Register__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/Register/Register */ "./src/components/Register/Register.tsx");
+/* harmony import */ var _components_Register_Register__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/SignUp/SignUp */ "./src/components/Register/Register.tsx");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__);
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
@@ -3388,7 +3388,7 @@ module.exports = content.locals || {};
 
 /***/ "./src/components/Register/Register.tsx":
 /*!**********************************************!*\
-  !*** ./src/components/Register/Register.tsx ***!
+  !*** ./src/components/SignUp/SignUp.tsx ***!
   \**********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -3403,7 +3403,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 __webpack_require__.$Refresh$.setup(module.i);
 
-var _jsxFileName = "/Users/egorblinov/dev/CMS/react_ts/src/components/Register/Register.tsx";
+var _jsxFileName = "/Users/egorblinov/dev/CMS/react_ts/src/components/SignUp/SignUp.tsx";
 
 
 
@@ -3442,7 +3442,7 @@ _c = Register;
 
 var _c;
 
-__webpack_require__.$Refresh$.register(_c, "Register");
+__webpack_require__.$Refresh$.register(_c, "Sign");
 
 const currentExports = __react_refresh_utils__.getModuleExports(module.i);
 __react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
@@ -3523,7 +3523,7 @@ if (true) {
 
 /***/ "./src/components/Register/register.module.scss":
 /*!******************************************************!*\
-  !*** ./src/components/Register/register.module.scss ***!
+  !*** ./src/components/SignUp/register.module.scss ***!
   \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {

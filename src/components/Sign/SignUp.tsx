@@ -1,7 +1,8 @@
 import styles from './register.module.scss';
 import TwitterIcon from "../Icons/TwitterIcon";
+import {Link} from "react-router-dom";
 
-const Register = () => {
+const SignUp = () => {
     return (
         <div className={styles.container}>
             <div className={styles.background}>
@@ -20,10 +21,11 @@ const Register = () => {
                     <input type="password" className={styles.field} placeholder={"Пароль"} required={true}/>
                     <input type="password" className={styles.field} placeholder={"Повторите пароль"} required={true}/>
                     <button className={styles.submit_btn}>Зарегистрироваться</button>
+                    <Link to={"/login"} className={styles.already_exist}>Уже есть аккаунт?</Link>
                 </form>
             </div>
         </div>
     )
 }
 
-export default Register;
+export default SignUp;

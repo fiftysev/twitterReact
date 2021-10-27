@@ -229,7 +229,7 @@ function isReactRefreshBoundary(moduleExports) {
 
 function registerExportsForReactRefresh(moduleExports, moduleId) {
   if (Refresh.isLikelyComponentType(moduleExports)) {
-    // Register module.exports if it is likely a component
+    // SignUp module.exports if it is likely a component
     Refresh.register(moduleExports, moduleId + ' %exports%');
   }
 
@@ -26669,7 +26669,7 @@ if (true) {
         if ( // Check if we're inside unbatchedUpdates
         (executionContext & LegacyUnbatchedContext) !== NoContext && // Check if we're not already rendering
         (executionContext & (RenderContext | CommitContext)) === NoContext) {
-          // Register pending interactions on the root to avoid losing traced interaction data.
+          // SignUp pending interactions on the root to avoid losing traced interaction data.
           schedulePendingInteractions(root, lane); // This is a legacy edge case. The initial mount of a ReactDOM.render-ed
           // root inside of batchedUpdates should be synchronous, but layout updates
           // should be deferred until the end of the batch.
