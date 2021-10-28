@@ -2,10 +2,15 @@ import DateIcon from '../Icons/DateIcon';
 import LinkIcon from '../Icons/LinkIcon';
 import MapIcon from '../Icons/MapIcon';
 import styles from './profileheader.module.scss';
+import {RouteComponentProps, withRouter} from 'react-router-dom';
 
-type ProfileHeaderProps = {
-    name: string;
-    username: string;
+interface ParamsData {
+    login: string
+}
+
+interface ProfileHeaderProps extends RouteComponentProps<ParamsData> {
+    name?: string;
+    username?: string;
     description?: string;
     locationCountry?: string;
     websiteLink?: string;
@@ -27,18 +32,19 @@ const ProfileHeader = (props: ProfileHeaderProps) => {
         followingCount,
         followersCount,
         profileAvatar,
-        profileBackground
+        profileBackground,
+        match
     } = props;
     return (
         <div className={styles.container}>
             <img src={profileBackground} alt="background" className={styles.background} />
             <img src={profileAvatar} alt="avatar" className={styles.avatar} />
 
-            <button className={styles.follow_button}>Читать</button>
+            <button className={styles.follow_button}>{match.params.login && <span>Редактировать</span>} {username && <span>Читать</span>}</button>
 
             <div className={styles.text_container}>
-                <h2 className={styles.name} > {name} </h2>
-                <span className={styles.username} > {username} </span>
+                <h2 className={styles.name} > {match.params.login || name} </h2>
+                <span className={styles.username}> @{match.params.login || username} </span>
                 <span className={styles.description}> {description} </span>
 
                 <div className={styles.additional_info}>
@@ -46,6 +52,7 @@ const ProfileHeader = (props: ProfileHeaderProps) => {
                     {websiteLink && <span className={styles.website}> <LinkIcon /> <a href="google.com">{websiteLink}</a> </span>}
                     {dateJoined && <span className={styles.joined_date}> <DateIcon /> Регистрация: {dateJoined} </span>}
                 </div>
+
                 <div className={styles.followers_info}>
                     <span className={styles.following}><b>{followingCount}</b> в читаемых</span>
                     <span><b>{followersCount}</b> читателей</span>
@@ -55,5 +62,5 @@ const ProfileHeader = (props: ProfileHeaderProps) => {
     )
 };
 
-export default ProfileHeader;
+export default withRouter(ProfileHeader);
 

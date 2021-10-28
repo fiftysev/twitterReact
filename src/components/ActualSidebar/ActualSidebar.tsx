@@ -14,7 +14,7 @@ type ActualSidebarProps = {
 
 const ActualSidebar = ({ actualData }: ActualSidebarProps) => {
     const actualElements = actualData.map((value, index) =>
-        <ActualSidebarElement data={value} index={index} />
+        <ActualSidebarElement data={value} index={index} key={index}/>
     )
     return (
         < div >

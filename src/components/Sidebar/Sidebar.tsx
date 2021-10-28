@@ -10,9 +10,9 @@ type SidebarProps = {
 
 
 const Sidebar = ({ listOfItems }: SidebarProps) => {
-  const menuItems = listOfItems.map((value) => (
+  const menuItems = listOfItems.map((value,index) => (
       <Link to={value.pathTitle}>
-          <SidebarElement elementIcon={value.elementIcon} elementTitle={value.elementTitle} />
+          <SidebarElement key={index} elementIcon={value.elementIcon} elementTitle={value.elementTitle} />
       </Link>
       )
   )

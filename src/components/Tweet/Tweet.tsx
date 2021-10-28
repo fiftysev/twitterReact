@@ -3,8 +3,13 @@ import LikeIcon from "../Icons/LikeIcon";
 import RetweetIcon from "../Icons/RetweetIcon";
 import ShareIcon from "../Icons/ShareIcon";
 import styles from "./tweet.module.scss";
+import {withRouter, RouteComponentProps} from 'react-router-dom';
 
-type TweetProps = {
+interface ParamsData {
+  login: string
+}
+
+interface TweetProps extends RouteComponentProps<ParamsData> {
   authorAvatar: string;
   authorName: string;
   authorUsername: string;
@@ -14,7 +19,7 @@ type TweetProps = {
   commentsCount: number | null;
   retweetsCount: number | null;
   likesCount: number | null;
-};
+}
 
 const Tweet = (props: TweetProps) => {
   const {
@@ -26,15 +31,16 @@ const Tweet = (props: TweetProps) => {
     tweetImage,
     commentsCount,
     retweetsCount,
-    likesCount
+    likesCount,
+    match
   } = props;
   return (
     <div className={styles.container}>
       <img src={authorAvatar} alt="author" className={styles.avatar} />
       <div className={styles.content}>
         <div className={styles.author_data}>
-          <span className={styles.name}>{authorName}</span>
-          <span className={styles.username}>{authorUsername}</span>
+          <span className={styles.name}>{match.params.login || authorName}</span>
+          <span className={styles.username}>@{match.params.login || authorUsername}</span>
           <span className={styles.dot}>•</span>
           <span className={styles.datetime}>{tweetedTimeAgo}</span>
         </div>
@@ -77,4 +83,4 @@ const Tweet = (props: TweetProps) => {
 };
 
 
-export default Tweet;
+export default withRouter(Tweet);
