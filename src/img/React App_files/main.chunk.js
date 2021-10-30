@@ -657,14 +657,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ "./src/index.css");
 /* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _img_Home_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./img/Home.svg */ "./src/img/Home.svg");
-/* harmony import */ var _img_Hashtag_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./img/Hashtag.svg */ "./src/img/Hashtag.svg");
-/* harmony import */ var _img_Notification_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./img/Notification.svg */ "./src/img/Notification.svg");
-/* harmony import */ var _img_Message_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./img/Message.svg */ "./src/img/Message.svg");
-/* harmony import */ var _img_Bookmark_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./img/Bookmark.svg */ "./src/img/Bookmark.svg");
-/* harmony import */ var _img_List_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./img/List.svg */ "./src/img/List.svg");
-/* harmony import */ var _img_Twitter_Logo_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./img/Twitter Logo.svg */ "./src/img/Twitter Logo.svg");
-/* harmony import */ var _img_More_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./img/More.svg */ "./src/img/More.svg");
+/* harmony import */ var _img_Home_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./img/home.svg */ "./src/img/Home.svg");
+/* harmony import */ var _img_Hashtag_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./img/hashtag.svg */ "./src/img/Hashtag.svg");
+/* harmony import */ var _img_Notification_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./img/notification.svg */ "./src/img/Notification.svg");
+/* harmony import */ var _img_Message_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./img/message.svg */ "./src/img/Message.svg");
+/* harmony import */ var _img_Bookmark_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./img/bookmark.svg */ "./src/img/Bookmark.svg");
+/* harmony import */ var _img_List_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./img/list.svg */ "./src/img/List.svg");
+/* harmony import */ var _img_Twitter_Logo_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./img/twitter_logo.svg */ "./src/img/Twitter Logo.svg");
+/* harmony import */ var _img_More_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./img/more.svg */ "./src/img/More.svg");
 /* harmony import */ var _components_Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/Sidebar/Sidebar */ "./src/components/Sidebar/Sidebar.tsx");
 /* harmony import */ var _components_ActualSidebar_ActualSidebar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/ActualSidebar/ActualSidebar */ "./src/components/ActualSidebar/ActualSidebar.tsx");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
@@ -4802,7 +4802,7 @@ module.exports = content.locals || {};
 
 /***/ "./src/img/Bookmark.svg":
 /*!******************************!*\
-  !*** ./src/img/Bookmark.svg ***!
+  !*** ./src/img/bookmark.svg ***!
   \******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -4815,7 +4815,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ "./src/img/Hashtag.svg":
 /*!*****************************!*\
-  !*** ./src/img/Hashtag.svg ***!
+  !*** ./src/img/hashtag.svg ***!
   \*****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -4828,7 +4828,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ "./src/img/Home.svg":
 /*!**************************!*\
-  !*** ./src/img/Home.svg ***!
+  !*** ./src/img/home.svg ***!
   \**************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -4841,7 +4841,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ "./src/img/List.svg":
 /*!**************************!*\
-  !*** ./src/img/List.svg ***!
+  !*** ./src/img/list.svg ***!
   \**************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -4854,7 +4854,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ "./src/img/Message.svg":
 /*!*****************************!*\
-  !*** ./src/img/Message.svg ***!
+  !*** ./src/img/message.svg ***!
   \*****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -4867,7 +4867,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ "./src/img/More.svg":
 /*!**************************!*\
-  !*** ./src/img/More.svg ***!
+  !*** ./src/img/more.svg ***!
   \**************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -4880,7 +4880,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ "./src/img/Notification.svg":
 /*!**********************************!*\
-  !*** ./src/img/Notification.svg ***!
+  !*** ./src/img/notification.svg ***!
   \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -4893,7 +4893,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ "./src/img/Twitter Logo.svg":
 /*!**********************************!*\
-  !*** ./src/img/Twitter Logo.svg ***!
+  !*** ./src/img/twitter_logo.svg ***!
   \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {

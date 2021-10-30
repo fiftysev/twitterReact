@@ -1,13 +1,13 @@
 import React, {ReactChild, ReactElement, ReactFragment, ReactPortal} from "react";
 import './index.css'
-import homeIcon from "./img/Home.svg";
-import hashtagIcon from "./img/Hashtag.svg";
-import notificationIcon from "./img/Notification.svg";
-import messageIcon from "./img/Message.svg";
-import bookmarkIcon from "./img/Bookmark.svg";
-import listIcon from "./img/List.svg";
-import twitterIcon from "./img/Twitter Logo.svg";
-import moreIcon from "./img/More.svg";
+import homeIcon from "./img/home.svg";
+import hashtagIcon from "./img/hashtag.svg";
+import notificationIcon from "./img/notification.svg";
+import messageIcon from "./img/message.svg";
+import bookmarkIcon from "./img/bookmark.svg";
+import listIcon from "./img/list.svg";
+import twitterIcon from "./img/twitter_logo.svg";
+import moreIcon from "./img/more.svg";
 import Sidebar from "./components/Sidebar/Sidebar";
 import ActualSidebar from "./components/ActualSidebar/ActualSidebar";
 
