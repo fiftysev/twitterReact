@@ -18,7 +18,7 @@ const SignIn = () => {
                 <form action="" className={styles.fields_form}>
                     <input type="text" className={styles.field} placeholder={"Имя или номер телефона"} maxLength={50} required={true}/>
                     <input type="password" className={styles.field} placeholder={"Пароль"} required={true}/>
-                    <button className={styles.submit_btn}>Войти</button>
+                    <button className={styles.submit_btn} type={"submit"}>Войти</button>
                     <Link to={"/register"} className={styles.already_exist}>Зарегистрироваться</Link>
                 </form>
             </div>
