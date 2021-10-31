@@ -1,0 +1,83 @@
+export const tweets = [
+  {
+    "avatar": "./img/tweetAuthor.png",
+    "name": "Windy",
+    "username": "windyday",
+    "timeAgo": "2 weeks ago",
+    "text": "Jason is a professional vocalist, guitarist and composer. He was first introduced to music when he was 13, but it was after the age of 15 that he began to pursue his passion for music. Jason started performing at his local music club in 1999 and has since performed at festivals, venues and events as well as on stage at music festivals.",
+    "image": "./img/imgMock.jpeg",
+    "likes": 263,
+    "retweets": 23,
+    "comments": 8,
+    "liked": false
+  },
+  {
+    "avatar": "img/tweetAuthor.png",
+    "name": "Windy",
+    "username": "windyday",
+    "timeAgo": "2 weeks ago",
+    "text": "I’ve always had a lot of life experience and a lot of wisdom.\" Eloise. About the band: The band is comprised of five musicians that have been together for over 15 years.",
+    "likes": 13091,
+    "retweets": 233,
+    "comments": 182,
+    "liked": false
+  },
+  {
+    "avatar": "./img/tweetAuthor.png",
+    "name": "Windy",
+    "username": "windyday",
+    "timeAgo": "2 weeks ago",
+    "text": "Their music is a direct reflection of their history of struggle, and they are proud to say that their music is an expression of their identity and their love for music.",
+    "image": "./img/imgMock.jpeg",
+    "likes": 263,
+    "retweets": 23,
+    "comments": 8,
+    "liked": true
+  },
+  {
+    "avatar": "./img/tweetAuthor.png",
+    "name": "Windy",
+    "username": "windyday",
+    "timeAgo": "2 weeks ago",
+    "text": "I’m a music teacher. I teach music theory and music composition. I’m a musician in love with my craft. I’m in the music business because I love it. I’ve never been the type of person that loves to sit and write lyrics. I’ve always liked to record and sing. I’ve been doing it for years.",
+    "image": "./img/imgMock.jpeg",
+    "likes": 263,
+    "retweets": 23,
+    "comments": 8,
+    "liked": false
+  },
+  {
+    "avatar": "./img/tweetAuthor.png",
+    "name": "Windy",
+    "username": "windyday",
+    "timeAgo": "2 weeks ago",
+    "text": "About the music: \"From the first moment that I heard the music, I knew it was going to be good. I've been told that it’s like a cross between the sound of the best hip hop and ska records and that I was mistaken.\"",
+    "image": "./img/imgMock.jpeg",
+    "likes": 13091,
+    "retweets": 233,
+    "comments": 182,
+    "liked": true
+  },
+  {
+    "avatar": "./img/tweetAuthor.png",
+    "name": "Windy",
+    "username": "windyday",
+    "timeAgo": "2 weeks ago",
+    "text": "I am a musician, vocalist, songwriter, and a self-employed musician. I have been writing music for about three years and have written my own material for about five years. I am a very independent, creative person and I love music and its freedom. I have been a singer/songwriter for more than four years.",
+    "likes": 13091,
+    "retweets": 233,
+    "comments": 182,
+    "liked": true
+  },
+  {
+    "avatar": "./img/tweetAuthor.png",
+    "name": "Windy",
+    "username": "windyday",
+    "timeAgo": "2 weeks ago",
+    "text": "I have been fascinated by music and art for a very long time. I am passionate about music, art and the people that create it. About the band:The band is comprised of a trio, a quartet, and a trio of vocalists. The quartet has been in the studio for three years.",
+    "likes": 13091,
+    "retweets": 233,
+    "comments": 182,
+    "liked": false
+  },
+]

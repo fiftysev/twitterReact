@@ -19,6 +19,7 @@ interface TweetProps extends RouteComponentProps<ParamsData> {
   commentsCount: number | null;
   retweetsCount: number | null;
   likesCount: number | null;
+  isLiked: boolean;
 }
 
 const Tweet = (props: TweetProps) => {
@@ -32,7 +33,7 @@ const Tweet = (props: TweetProps) => {
     commentsCount,
     retweetsCount,
     likesCount,
-    match
+    match,
   } = props;
   return (
     <div className={styles.container}>
@@ -46,7 +47,7 @@ const Tweet = (props: TweetProps) => {
         </div>
         <div>
           <p className={styles.tweet_text}>{tweetText}</p>
-          <img src={tweetImage} alt="tweetimg" className={styles.tweet_image} />
+          {tweetImage && <img src={tweetImage} alt="tweetimg" className={styles.tweet_image} />}
         </div>
         <div className={styles.actionbar}>
 
