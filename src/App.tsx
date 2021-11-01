@@ -1,11 +1,6 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-
-import './index.css';
+import "./index.css";
 
 import SignUp from "./components/Sign/SignUp";
 import SignIn from "./components/Sign/SignIn";
@@ -14,18 +9,17 @@ import User from "./pages/User";
 import Profile from "./pages/Profile";
 
 const App = () => {
-
   return (
-      <Router >
-        <Switch>
-          <Route path={"/profile"} component={Profile}/>
-          <Route path={"/register"} component={SignUp}/>
-          <Route path={"/login"} component={SignIn}/>
-          <Route path={"/user/:login"} component={User}/>
-          <Route path={"/home"} component={Home}/>
-        </Switch>
-      </Router>
-  )
-}
+    <Router>
+      <Switch>
+        <Route path={"/profile"} component={Profile} />
+        <Route path={"/register"} component={SignUp} />
+        <Route path={"/login"} component={SignIn} />
+        <Route path={"/user/:login"} component={User} />
+        <Route path={"/home"} component={Home} />
+      </Switch>
+    </Router>
+  );
+};
 
 export default App;
