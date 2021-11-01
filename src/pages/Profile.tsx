@@ -5,9 +5,12 @@ import profileBackground from "../img/backgroundProfile.jpeg";
 import Tweet from "../components/Tweet/Tweet";
 import Layout from "../Layout";
 import { tweets } from "../data";
+import { useState } from "react";
+import ProfileTabBar from "../components/ProfileTabBar/ProfileTabBar";
 
 const Profile = () => {
-  const Tweets = tweets.map((value) => {
+  const [data, setData] = useState(tweets);
+  const Tweets = data.map((value) => {
     return (
       <Tweet
         authorAvatar={value.avatar}
@@ -38,6 +41,7 @@ const Profile = () => {
           profileAvatar={profileAvatar}
           profileBackground={profileBackground}
         />
+        <ProfileTabBar dataChanger={setData} />
         {Tweets}
       </Feed>
     </Layout>
