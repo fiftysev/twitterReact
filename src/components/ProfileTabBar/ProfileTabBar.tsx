@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./tabbar.module.scss";
-import { tweets } from "../../data";
+import { tweets } from "../../tweetsData";
 import Tab from "./Tab";
 
 type TabBarProps = {

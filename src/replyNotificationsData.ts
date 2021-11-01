@@ -1,0 +1,77 @@
+const replyNotificationsData = [
+  {
+    "avatar": "./img/tweetAuthor.png",
+    "name": "Windy",
+    "username": "windyday",
+    "timeAgo": "22h",
+    "text": "Awesome!",
+    "image": "./img/imgMock.jpeg",
+    "likes": 13091,
+    "retweets": 233,
+    "comments": 182,
+    "liked": true,
+    "replyTo": "GodDamn"
+  },
+  {
+    "avatar": "./img/tweetAuthor.png",
+    "name": "Windy",
+    "username": "windyday",
+    "timeAgo": "22h",
+    "text": "Awesome!",
+    "likes": 13091,
+    "retweets": 233,
+    "comments": 182,
+    "liked": true,
+    "replyTo": "GodDamn"
+  },
+  {
+    "avatar": "./img/tweetAuthor.png",
+    "name": "Windy",
+    "username": "windyday",
+    "timeAgo": "22h",
+    "text": "Awesome!",
+    "likes": 13091,
+    "retweets": 233,
+    "comments": 182,
+    "liked": true,
+    "replyTo": "GodDamn"
+  },
+  {
+    "avatar": "./img/tweetAuthor.png",
+    "name": "Windy",
+    "username": "windyday",
+    "timeAgo": "22h",
+    "text": "Awesome!",
+    "likes": 13091,
+    "retweets": 233,
+    "comments": 182,
+    "liked": true,
+    "replyTo": "GodDamn"
+  },
+  {
+    "avatar": "./img/tweetAuthor.png",
+    "name": "Windy",
+    "username": "windyday",
+    "timeAgo": "22h",
+    "text": "Awesome!",
+    "likes": 13091,
+    "retweets": 233,
+    "comments": 182,
+    "liked": true,
+    "replyTo": "GodDamn"
+  },
+  {
+    "avatar": "./img/tweetAuthor.png",
+    "name": "Windy",
+    "username": "windyday",
+    "timeAgo": "22h",
+    "text": "Awesome!",
+    "likes": 13091,
+    "retweets": 233,
+    "comments": 182,
+    "liked": true,
+    "replyTo": "GodDamn"
+  }, 
+]
+
+export default replyNotificationsData;

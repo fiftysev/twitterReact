@@ -1,0 +1,154 @@
+@import "../../variables.scss";
+
+.container {
+  padding: 16px;
+  background-color: $backgroundColor;
+  display: flex;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+}
+
+.author_data {
+  padding-bottom: 0.5rem;
+  * {
+    padding: 0 3px;
+  }
+
+  .name {
+    font-weight: bold;
+    color: $foregroundColor;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .username,
+  .datetime,
+  .dot {
+    color: $subheadColor;
+    cursor: pointer;
+  }
+
+  .datetime:hover {
+    text-decoration: underline;
+  }
+}
+
+.content {
+  width: fit-content;
+}
+
+// TODO("refactor classnames")
+
+.reply_to {
+  color: $foregroundColor;
+  .user_link {
+    color: $twitterBlue;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.tweet_image {
+  width: $imageWidth;
+  height: 100%;
+  margin-top: 12px;
+  border-radius: $componentBorderRadius;
+}
+
+.tweet_text {
+  width: 500px;
+  color: $foregroundColor;
+  line-height: $textHeight;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 50%;
+  transition: all 0.15s;
+  path {
+    fill: $subheadColor;
+  }
+  circle {
+    fill: $subheadColor;
+  }
+}
+
+.actionbar {
+  color: $subheadColor;
+  display: flex;
+  justify-content: flex-start;
+
+  .action_button {
+    display: flex;
+    align-items: center;
+    margin-right: 5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  span {
+    font-size: 14px;
+  }
+
+  .comment:hover {
+    .icon {
+      background: $twitterBlueAlpha;
+    }
+    path {
+      fill: $twitterBlue;
+    }
+    color: $twitterBlue;
+  }
+
+  .like:hover {
+    .icon {
+      background: $likeButtonColorAlpha;
+    }
+    path {
+      fill: $likeButtonColor;
+    }
+    color: $likeButtonColor;
+  }
+
+  .retweet:hover {
+    .icon {
+      background: $retweetButtonColorAlpha;
+    }
+    path {
+      fill: $retweetButtonColor;
+    }
+    color: $retweetButtonColor;
+  }
+
+  .share:hover {
+    .icon {
+      background: $twitterBlueAlpha;
+    }
+    path {
+      fill: $twitterBlue;
+    }
+    color: $twitterBlue;
+  }
+}
+
+.liked {
+  path {
+    fill: $likeButtonColor;
+  }
+  color: $likeButtonColor;
+}
