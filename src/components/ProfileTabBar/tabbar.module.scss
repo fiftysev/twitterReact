@@ -8,16 +8,35 @@
 
 .tab {
   text-align: center;
-  padding: 16px;
   flex-grow: 1;
-  background-color: $twitterBlueAlpha;
+  padding: 16px;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
 }
 
 .tab_title {
-  color: $foregroundColor;
-  font-weight: bold;
+  color: $subheadColor;
+  font-weight: normal;
 }
 
-.active {
-  background-color: $twitterBlue;
+.active_tab {
+  position: relative;
+  .tab_title {
+    color: $foregroundColor;
+    font-weight: bold;
+  }
+  .tab_title::after {
+    content: "";
+    background-color: $twitterBlue;
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 50%;
+    border-radius: 1rem;
+    bottom: 0;
+    left: 25%;
+    text-align: center;
+  }
 }

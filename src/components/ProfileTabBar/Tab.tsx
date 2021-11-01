@@ -9,7 +9,7 @@ type TabProps = {
 
 const Tab = ({ dataChanger, activeChanger, tabTitle, isActive }: TabProps) => (
   <div
-    className={styles.tab}
+    className={`${styles.tab} ${isActive && styles.active_tab}`}
     onClick={() => {
       dataChanger();
       activeChanger();
