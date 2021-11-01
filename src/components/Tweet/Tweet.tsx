@@ -3,10 +3,11 @@ import LikeIcon from "../Icons/LikeIcon";
 import RetweetIcon from "../Icons/RetweetIcon";
 import ShareIcon from "../Icons/ShareIcon";
 import styles from "./tweet.module.scss";
-import {withRouter, RouteComponentProps} from 'react-router-dom';
+import { withRouter, RouteComponentProps } from "react-router-dom";
+import FillLikeIcon from "../Icons/FillLikeIcon";
 
 interface ParamsData {
-  login: string
+  login: string;
 }
 
 interface TweetProps extends RouteComponentProps<ParamsData> {
@@ -34,23 +35,33 @@ const Tweet = (props: TweetProps) => {
     retweetsCount,
     likesCount,
     match,
+    isLiked,
   } = props;
   return (
     <div className={styles.container}>
       <img src={authorAvatar} alt="author" className={styles.avatar} />
       <div className={styles.content}>
         <div className={styles.author_data}>
-          <span className={styles.name}>{match.params.login || authorName}</span>
-          <span className={styles.username}>@{match.params.login || authorUsername}</span>
+          <span className={styles.name}>
+            {match.params.login || authorName}
+          </span>
+          <span className={styles.username}>
+            @{match.params.login || authorUsername}
+          </span>
           <span className={styles.dot}>•</span>
           <span className={styles.datetime}>{tweetedTimeAgo}</span>
         </div>
         <div>
           <p className={styles.tweet_text}>{tweetText}</p>
-          {tweetImage && <img src={tweetImage} alt="tweetimg" className={styles.tweet_image} />}
+          {tweetImage && (
+            <img
+              src={tweetImage}
+              alt="tweetimg"
+              className={styles.tweet_image}
+            />
+          )}
         </div>
         <div className={styles.actionbar}>
-
           <div className={`${styles.action_button} ${styles.comment}`}>
             <div className={styles.icon}>
               <CommentsIcon />
@@ -66,10 +77,11 @@ const Tweet = (props: TweetProps) => {
           </div>
 
           <div className={`${styles.action_button} ${styles.like}`}>
-            <div className={styles.icon}>
-              <LikeIcon />
+            <div className={`${styles.icon} ${isLiked && styles.liked}`}>
+              {!isLiked && <LikeIcon />}
+              {isLiked && <FillLikeIcon />}
             </div>
-            <span>{likesCount}</span>
+            <span className={`${isLiked && styles.liked}`}>{likesCount}</span>
           </div>
 
           <div className={`${styles.action_button} ${styles.share}`}>
@@ -80,8 +92,7 @@ const Tweet = (props: TweetProps) => {
         </div>
       </div>
     </div>
-  )
+  );
 };
-
 
 export default withRouter(Tweet);

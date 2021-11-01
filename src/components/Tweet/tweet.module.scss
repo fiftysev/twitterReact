@@ -18,7 +18,6 @@
 .author_data {
   * {
     padding: 0 3px;
-
   }
 
   .name {
@@ -30,8 +29,9 @@
     }
   }
 
-
-  .username, .datetime, .dot {
+  .username,
+  .datetime,
+  .dot {
     color: $subheadColor;
     cursor: pointer;
   }
@@ -39,7 +39,6 @@
   .datetime:hover {
     text-decoration: underline;
   }
-
 }
 
 .content {
@@ -80,7 +79,6 @@
   color: $subheadColor;
   display: flex;
   justify-content: flex-start;
-
 
   .action_button {
     display: flex;
@@ -135,3 +133,9 @@
   }
 }
 
+.liked {
+  path {
+    fill: $likeButtonColor;
+  }
+  color: $likeButtonColor;
+}
