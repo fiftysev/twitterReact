@@ -1,1 +1,9 @@
 @import "../../variables";
+
+.container {
+  padding: 16px;
+  background-color: $backgroundColor;
+  display: flex;
+  align-items: flex-start;
+  flex-grow: 1;
+}
