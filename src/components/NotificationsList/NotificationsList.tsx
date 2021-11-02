@@ -1,12 +1,20 @@
 import styles from "./notification.module.scss";
 import Notification from "./Notification";
+import notificationsData from "../../notificationsData";
 import replyNotificationsData from "../../replyNotificationsData";
 import ReplyNotification from "./ReplyNotification";
 
 const NotificationsList = () => (
   <div className={styles.list_container}>
-    <Notification />
-    {replyNotificationsData.map((e, i) => (
+    {notificationsData.map((e) => (
+      <Notification
+        notificationType={e.notificationType}
+        notificationAuthor={e.notificationAuthor}
+        notificationAuthorAvatar={e.notificationAuthorAvatar}
+        notificationText={e.notificationText}
+      />
+    ))}
+    {replyNotificationsData.map((e) => (
       <ReplyNotification
         authorAvatar={e.avatar}
         authorName={e.name}
