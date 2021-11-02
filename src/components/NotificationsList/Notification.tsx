@@ -39,7 +39,7 @@ const SubheadText = (props: { type: string; author: string }) => {
     case "like":
       return (
         <p className={styles.author}>
-          <b>{props.author} понравился ваш твит</b>
+          <b>{props.author}</b> понравился ваш твит
         </p>
       );
   }

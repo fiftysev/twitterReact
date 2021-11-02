@@ -4,7 +4,7 @@ import profileAvatar from "../img/profileAvatar.jpg";
 import profileBackground from "../img/backgroundProfile.jpeg";
 import Tweet from "../components/Tweet/Tweet";
 import Layout from "../Layout";
-import { tweets } from "../tweetsData";
+import tweets from "../tweetsData.json";
 
 const User = () => {
   const Tweets = tweets.map((value) => {

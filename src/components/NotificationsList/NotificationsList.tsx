@@ -1,7 +1,7 @@
 import styles from "./notification.module.scss";
 import Notification from "./Notification";
 import notificationsData from "../../notificationsData";
-import replyNotificationsData from "../../replyNotificationsData";
+import data from "../../replyNotificationsData.json";
 import ReplyNotification from "./ReplyNotification";
 
 const NotificationsList = () => (
@@ -14,7 +14,7 @@ const NotificationsList = () => (
         notificationText={e.notificationText}
       />
     ))}
-    {replyNotificationsData.map((e) => (
+    {data.map((e) => (
       <ReplyNotification
         authorAvatar={e.avatar}
         authorName={e.name}

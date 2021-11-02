@@ -1,4 +1,4 @@
-const replyNotificationsData = [
+[
   {
     "avatar": "./img/tweetAuthor.png",
     "name": "Windy",
@@ -71,7 +71,5 @@ const replyNotificationsData = [
     "comments": 182,
     "liked": true,
     "replyTo": "GodDamn"
-  }, 
+  } 
 ]
-
-export default replyNotificationsData;

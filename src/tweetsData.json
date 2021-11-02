@@ -1,4 +1,4 @@
-export const tweets = [
+[
   {
     "avatar": "./img/tweetAuthor.png",
     "name": "Windy",
@@ -79,5 +79,5 @@ export const tweets = [
     "retweets": 233,
     "comments": 182,
     "liked": false
-  },
+  }
 ]

@@ -9,6 +9,26 @@
 }
 
 .icon {
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
+  margin-right: 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.author {
+  color: $foregroundColor;
+}
+
+.text {
+  color: $subheadColor;
 }

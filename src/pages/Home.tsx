@@ -3,7 +3,7 @@ import TweetCreateForm from "../components/TweetCreateForm/TweetCreateForm";
 import userAvatar from "../img/tweetAuthor.png";
 import Tweet from "../components/Tweet/Tweet";
 import Layout from "../Layout";
-import { tweets } from "../tweetsData";
+import tweets from "../tweetsData.json";
 
 const Home = () => {
   const Tweets = tweets.map((value) => {
