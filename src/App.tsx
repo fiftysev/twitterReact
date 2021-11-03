@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import User from "./pages/User";
 import Profile from "./pages/Profile";
 import Notifications from "./pages/Notifications";
+import Explore from "./pages/Explore";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path={"/login"} component={SignIn} />
         <Route path={"/user/:login"} component={User} />
         <Route path={"/notifications"} component={Notifications} />
+        <Route path={"/explore"} component={Explore} />
         <Route path={"/"} component={Home} />
       </Switch>
     </Router>

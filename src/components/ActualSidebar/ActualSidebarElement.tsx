@@ -2,9 +2,11 @@ import styles from "./actualsidebar.module.scss";
 
 type SidebarElementProps = {
   data: {
-    category: string;
-    title: string;
+    category?: string;
+    title?: string;
     countOfTweets?: string;
+    userFollowRec?: string;
+    userAvatarRec?: string;
   };
   index: number;
 };
@@ -12,7 +14,6 @@ type SidebarElementProps = {
 const ActualSidebarElement = ({ data, index }: SidebarElementProps) => (
   <div className={styles.element}>
     <span className={styles.subhead_text}>
-      {" "}
       {index + 1} • {data.category}
     </span>
     <span className={styles.element_title}>{data.title}</span>

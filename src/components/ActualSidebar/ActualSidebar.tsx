@@ -3,13 +3,16 @@ import ActualSidebarElement from "./ActualSidebarElement";
 import SearchForm from "./SearchForm";
 
 type ActualElementData = {
-  category: string;
-  title: string;
+  category?: string;
+  title?: string;
   countOfTweets?: string;
+  userFollowRec?: string;
+  userAvatarRec?: string;
 };
 
 type ActualSidebarProps = {
   actualData: Array<ActualElementData>;
+  sidebarTitle: string;
 };
 
 const ActualSidebar = ({ actualData }: ActualSidebarProps) => {
