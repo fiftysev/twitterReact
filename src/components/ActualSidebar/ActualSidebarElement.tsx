@@ -1,4 +1,5 @@
 import styles from "./actualsidebar.module.scss";
+import { Link } from "react-router-dom";
 
 type SidebarElementProps = {
   data: {
@@ -19,13 +20,17 @@ const ActualSidebarElement = ({ data, index }: SidebarElementProps) => (
         {index + 1} • {data.category}
       </span>
     )}
+    {data.userRecAvatar && (
+      <img src={data.userRecAvatar} alt="avatar" className={styles.avatar} />
+    )}
     <span className={styles.element_title}>
       {data.userRecName || data.title}
     </span>
+    <Link to={`/user/${data.userRecUsername}`} className={styles.subhead_text}>
+      {data.userRecUsername && `@${data.userRecUsername}`}
+    </Link>
     <span className={styles.subhead_text}>
-      {data.userRecUsername === undefined
-        ? `Твитов: ${data.countOfTweets}`
-        : `@${data.userRecUsername}`}
+      {data.countOfTweets && `Твитов: ${data.countOfTweets}`}
     </span>
     {data.userRecName && <button className={styles.follow_btn}>Читать</button>}
   </div>

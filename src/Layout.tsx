@@ -67,7 +67,9 @@ const Layout = (props: layoutProps) => {
     <div className="container">
       <Sidebar listOfItems={sidebarItems} />
       {props.children}
-      <ActualSidebar actualData={actualData} sidebarTitle={actualTitle} />
+      <div className="sidebar_container">
+        <ActualSidebar actualData={actualData} sidebarTitle={actualTitle} />
+      </div>
     </div>
   );
 };

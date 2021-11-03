@@ -1,9 +1,9 @@
-@import '../../variables';
+@import "../../variables";
 
 .container {
   position: sticky;
   top: 0;
-  width: 350px;
+  flex: 1;
   display: flex;
   flex-direction: column;
   color: $foregroundColor;
@@ -17,16 +17,21 @@
 }
 
 .element {
+  min-width: 30%;
+  position: relative;
   padding: 16px;
   flex-grow: 1;
   &:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
   }
 }
 
 .subhead_text {
   display: block;
   color: $subheadColor;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .element_title {
@@ -61,4 +66,25 @@
     height: 24px;
     color: $foregroundColor;
   }
+}
+
+.follow_btn {
+  height: 36px;
+  position: absolute;
+  right: 16px;
+  top: calc(50% - 36px);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline;
 }

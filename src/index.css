@@ -22,6 +22,11 @@ a {
   width: 600px;
 }
 
+.sidebar_container {
+  min-width: 350px;
+  width: 30%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
