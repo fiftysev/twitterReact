@@ -3,20 +3,40 @@ import ActualSidebar from "../components/ActualSidebar/ActualSidebar";
 import Feed from "../Feed";
 import Layout from "../Layout";
 
-const actualSidebarItems = [
-  { category: "Музыка", title: "Juice WRLD", countOfTweets: "127 тыс." },
-  { category: "Знаменитости", title: "Илон Маск", countOfTweets: "7898" },
-  { category: "Тренды", title: "YEEZY" },
-  { category: "Спорт", title: "Майк Тайсон", countOfTweets: "1,83 млн." },
-  { category: "Популярное", title: "Tатарстан" },
+const userRecItems = [
+  {
+    userRecAvatar: ".img/tweetAuthor.png",
+    userRecName: "GodDamn",
+    userRecUsername: "GodDamn",
+  },
+  {
+    userRecAvatar: ".img/tweetAuthor.png",
+    userRecName: "GodDamn",
+    userRecUsername: "GodDamn",
+  },
+  {
+    userRecAvatar: ".img/tweetAuthor.png",
+    userRecName: "GodDamn",
+    userRecUsername: "GodDamn",
+  },
+  {
+    userRecAvatar: ".img/tweetAuthor.png",
+    userRecName: "GodDamn",
+    userRecUsername: "GodDamn",
+  },
+  {
+    userRecAvatar: ".img/tweetAuthor.png",
+    userRecName: "GodDamn",
+    userRecUsername: "GodDamn",
+  },
 ];
 
 const Explore = () => {
   return (
-    <Layout>
+    <Layout rightSidebarTitle={"Кого читать"}>
       <Feed>
         <ActualSidebar
-          actualData={actualSidebarItems}
+          actualData={userRecItems}
           sidebarTitle={"Актуальные темы"}
         />
       </Feed>

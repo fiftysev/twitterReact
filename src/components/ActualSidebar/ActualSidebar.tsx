@@ -6,8 +6,9 @@ type ActualElementData = {
   category?: string;
   title?: string;
   countOfTweets?: string;
-  userFollowRec?: string;
-  userAvatarRec?: string;
+  userRecName?: string;
+  userRecUsername?: string;
+  userRecAvatar?: string;
 };
 
 type ActualSidebarProps = {
@@ -21,7 +22,7 @@ const ActualSidebar = ({ actualData, sidebarTitle }: ActualSidebarProps) => {
   ));
   return (
     <div>
-      {sidebarTitle === "Актуальное" && <SearchForm />}
+      {sidebarTitle === "Актуальные темы" && <SearchForm />}
       <div className={styles.container}>
         <h3 className={styles.title}>{sidebarTitle}</h3>
         {actualElements}
