@@ -16,7 +16,7 @@ const Explore = () => {
       <Feed>
         <ActualSidebar
           actualData={actualSidebarItems}
-          sidebarTitle={"Актуальноe"}
+          sidebarTitle={"Рекомендуем подписаться"}
         />
       </Feed>
     </Layout>

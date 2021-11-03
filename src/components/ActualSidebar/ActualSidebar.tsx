@@ -15,15 +15,15 @@ type ActualSidebarProps = {
   sidebarTitle: string;
 };
 
-const ActualSidebar = ({ actualData }: ActualSidebarProps) => {
+const ActualSidebar = ({ actualData, sidebarTitle }: ActualSidebarProps) => {
   const actualElements = actualData.map((value, index) => (
     <ActualSidebarElement data={value} index={index} key={index} />
   ));
   return (
     <div>
-      <SearchForm />
+      {sidebarTitle === "Актуальное" && <SearchForm />}
       <div className={styles.container}>
-        <h3 className={styles.title}>Актуальные темы</h3>
+        <h3 className={styles.title}>{sidebarTitle}</h3>
         {actualElements}
       </div>
     </div>
