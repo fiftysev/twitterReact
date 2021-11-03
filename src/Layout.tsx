@@ -1,9 +1,4 @@
-import React, {
-  ReactChild,
-  ReactElement,
-  ReactFragment,
-  ReactPortal,
-} from "react";
+import { ReactChild, ReactElement, ReactFragment, ReactPortal } from "react";
 import "./index.css";
 import homeIcon from "./img/home.svg";
 import hashtagIcon from "./img/hashtag.svg";
@@ -55,17 +50,26 @@ type layoutProps = {
     | ReactPortal
     | null
     | undefined;
+  rightSidebarTitle?: string;
+  customRightSidebarItems?: object[];
 };
 
-const Layout = (props: layoutProps) => (
-  <div className="container">
-    <Sidebar listOfItems={sidebarItems} />
-    {props.children}
-    <ActualSidebar
-      actualData={actualSidebarItems}
-      sidebarTitle={"Актуальное"}
-    />
-  </div>
-);
+const Layout = (props: layoutProps) => {
+  const actualTitle =
+    props.rightSidebarTitle === undefined
+      ? "Актуальные темы"
+      : props.rightSidebarTitle;
+  const actualData =
+    props.customRightSidebarItems === undefined
+      ? actualSidebarItems
+      : props.customRightSidebarItems;
+  return (
+    <div className="container">
+      <Sidebar listOfItems={sidebarItems} />
+      {props.children}
+      <ActualSidebar actualData={actualData} sidebarTitle={actualTitle} />
+    </div>
+  );
+};
 
 export default Layout;
