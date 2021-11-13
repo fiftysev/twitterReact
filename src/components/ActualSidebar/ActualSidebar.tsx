@@ -21,7 +21,7 @@ const ActualSidebar = ({ actualData, sidebarTitle }: ActualSidebarProps) => {
     <ActualSidebarElement data={value} index={index} key={index} />
   ));
   return (
-    <div>
+    <div className={styles.wrapper}>
       {sidebarTitle === "Актуальные темы" && <SearchForm />}
       <div className={styles.container}>
         <h3 className={styles.title}>{sidebarTitle}</h3>

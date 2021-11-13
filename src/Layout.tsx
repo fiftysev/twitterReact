@@ -1,4 +1,3 @@
-import { ReactChild, ReactElement, ReactFragment, ReactPortal } from "react";
 import "./index.css";
 import homeIcon from "./img/home.svg";
 import hashtagIcon from "./img/hashtag.svg";
@@ -10,6 +9,7 @@ import twitterIcon from "./img/twitter_logo.svg";
 import moreIcon from "./img/more.svg";
 import Sidebar from "./components/Sidebar/Sidebar";
 import ActualSidebar from "./components/ActualSidebar/ActualSidebar";
+import { ReactNode } from "react";
 
 const sidebarItems = [
   { elementIcon: homeIcon, elementTitle: "Главная", pathTitle: "/home" },
@@ -43,13 +43,7 @@ const actualSidebarItems = [
 ];
 
 type layoutProps = {
-  children:
-    | ReactElement
-    | ReactChild
-    | ReactFragment
-    | ReactPortal
-    | null
-    | undefined;
+  children: ReactNode;
   rightSidebarTitle?: string;
   customRightSidebarItems?: object[];
 };

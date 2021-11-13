@@ -42,6 +42,7 @@ const ProfileHeader = (props: ProfileHeaderProps) => {
         alt="background"
         className={styles.background}
       />
+
       <img src={profileAvatar} alt="avatar" className={styles.avatar} />
 
       <button className={styles.follow_button}>
