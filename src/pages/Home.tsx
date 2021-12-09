@@ -3,10 +3,8 @@ import TweetCreateForm from "../components/TweetCreateForm/TweetCreateForm";
 import userAvatar from "../img/tweetAuthor.png";
 import Tweet from "../components/Tweet/Tweet";
 import Layout from "../Layout";
-import tweets from "../tweetsData.json";
 import ApiService from "../utils/http.service";
 import { useEffect, useState, ReactFragment } from "react";
-import { ITweet } from "../models/ITweet";
 
 const Home = () => {
   const [tweets, setTweets] = useState<ReactFragment[]>([]);
