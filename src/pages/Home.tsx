@@ -4,24 +4,34 @@ import userAvatar from "../img/tweetAuthor.png";
 import Tweet from "../components/Tweet/Tweet";
 import Layout from "../Layout";
 import tweets from "../tweetsData.json";
+import ApiService from "../utils/http.service";
+import { useEffect, useState, ReactFragment } from "react";
+import { ITweet } from "../models/ITweet";
 
 const Home = () => {
-  const Tweets = tweets.map((value) => {
-    return (
-      <Tweet
-        authorAvatar={value.avatar}
-        authorName={value.name}
-        authorUsername={value.username}
-        tweetedTimeAgo={value.timeAgo}
-        tweetImage={value.image}
-        tweetText={value.text}
-        likesCount={value.likes}
-        retweetsCount={value.retweets}
-        commentsCount={value.comments}
-        isLiked={value.liked}
-      />
-    );
-  });
+  const [tweets, setTweets] = useState<ReactFragment[]>([]);
+  useEffect(() => {
+    ApiService.getTweets().then((response) => {
+      const Tweets = response.data.map((t) => {
+        return (
+          <Tweet
+            authorAvatar={t.avatar}
+            authorName={t.name}
+            authorUsername={t.username}
+            tweetedTimeAgo={"15 h."}
+            tweetImage={t.image}
+            tweetText={t.text}
+            likesCount={t.likes}
+            retweetsCount={t.retweets}
+            commentsCount={t.comments}
+            isLiked={t.isLiked}
+          />
+        );
+      });
+      setTweets(Tweets);
+    });
+  }, []);
+
   return (
     <Layout>
       <Feed>
@@ -32,7 +42,7 @@ const Home = () => {
           placeholderText={"Что происходит?"}
           userAvatar={userAvatar}
         />
-        {Tweets}
+        {tweets}
       </Feed>
     </Layout>
   );
