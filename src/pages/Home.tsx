@@ -1,10 +1,11 @@
+import { useEffect, useState, ReactFragment } from "react";
+import ApiService from "../utils/http.service";
+
+import Layout from "../Layout";
 import Feed from "../Feed";
 import TweetCreateForm from "../components/TweetCreateForm/TweetCreateForm";
-import userAvatar from "../img/tweetAuthor.png";
 import Tweet from "../components/Tweet/Tweet";
-import Layout from "../Layout";
-import ApiService from "../utils/http.service";
-import { useEffect, useState, ReactFragment } from "react";
+import userAvatar from "../img/tweetAuthor.png";
 
 const Home = () => {
   const [tweets, setTweets] = useState<ReactFragment[]>([]);
