@@ -11,6 +11,7 @@ interface ParamsData {
 }
 
 interface TweetProps extends RouteComponentProps<ParamsData> {
+  id: number;
   authorAvatar: string;
   authorName: string;
   authorUsername: string;
@@ -25,6 +26,7 @@ interface TweetProps extends RouteComponentProps<ParamsData> {
 
 const Tweet = (props: TweetProps) => {
   const {
+    id,
     authorAvatar,
     authorName,
     authorUsername,
@@ -49,7 +51,9 @@ const Tweet = (props: TweetProps) => {
             @{match.params.login || authorUsername}
           </span>
           <span className={styles.dot}>•</span>
-          <span className={styles.datetime}>{tweetedTimeAgo}</span>
+          <a href={`/tweets/${id}`} className={styles.datetime}>
+            {tweetedTimeAgo}
+          </a>
         </div>
         <div>
           <p className={styles.tweet_text}>{tweetText}</p>

@@ -11,6 +11,7 @@ const User = () => {
     // @ts-ignore
     return (
       <Tweet
+        id={12}
         authorAvatar={value.avatar}
         authorName={value.name}
         authorUsername={value.username}

@@ -13,6 +13,8 @@ const Home = () => {
       const Tweets = response.data.map((t) => {
         return (
           <Tweet
+            key={t.id}
+            id={t.id}
             authorAvatar={t.avatar}
             authorName={t.name}
             authorUsername={t.username}

@@ -59,6 +59,7 @@ const Explore = () => {
         <TweetGroup groupTitle="Music">
           {firstGroup.map((value) => (
             <Tweet
+              id={12}
               authorAvatar={value.avatar}
               authorName={value.name}
               authorUsername={value.username}
@@ -75,6 +76,7 @@ const Explore = () => {
         <TweetGroup groupTitle="Shimanovsk">
           {secondGroup.map((value) => (
             <Tweet
+              id={12}
               authorAvatar={value.avatar}
               authorName={value.name}
               authorUsername={value.username}
@@ -91,6 +93,7 @@ const Explore = () => {
         <TweetGroup groupTitle="Gangsta">
           {thirdGroup.map((value) => (
             <Tweet
+              id={12}
               authorAvatar={value.avatar}
               authorName={value.name}
               authorUsername={value.username}

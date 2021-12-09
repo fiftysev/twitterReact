@@ -9,6 +9,7 @@ import User from "./pages/User";
 import Profile from "./pages/Profile";
 import Notifications from "./pages/Notifications";
 import Explore from "./pages/Explore";
+import TweetDetails from "./pages/TweetDetails";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path={"/user/:login"} component={User} />
         <Route path={"/notifications"} component={Notifications} />
         <Route path={"/explore"} component={Explore} />
+        <Route path={"/tweets/:id"} component={TweetDetails} />
         <Route path={"/"} component={Home} />
       </Switch>
     </Router>

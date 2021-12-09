@@ -13,6 +13,7 @@ const Profile = () => {
   const Tweets = data.map((value) => {
     return (
       <Tweet
+        id={12}
         authorAvatar={value.avatar}
         authorName={value.name}
         authorUsername={value.username}
