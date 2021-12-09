@@ -12,7 +12,16 @@ export default class ApiService {
   }
 
   static async getTweet(id: string): Promise<AxiosResponse<ITweet>> {
-    console.log(id);
     return $api.get<ITweet>(`/tweets/${id}`);
+  }
+
+  static async sendTweet(
+    avatar: string,
+    name: string,
+    username: string,
+    text: string,
+    image?: string
+  ) {
+    return $api.post(`/tweets/create`, { avatar, name, username, text, image });
   }
 }
