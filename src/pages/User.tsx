@@ -33,8 +33,8 @@ const User = () => {
           websiteLink={"vedomosti.ru"}
           locationCountry={"Россия"}
           dateJoined={"февраль 2009"}
-          followingCount={"31"}
-          followersCount={"728,3 тыс."}
+          followingCount={31}
+          followersCount={728.3}
           profileAvatar={profileAvatar}
           profileBackground={profileBackground}
         />

@@ -1,5 +1,4 @@
 export interface ITweet {
-  _id?: string;
   id: number;
   avatar: string;
   name: string;

@@ -1,5 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 import { ITweet } from "../models/ITweet";
+import { IUser } from "../models/IUser";
 
 const $api = axios.create({
   withCredentials: true,
@@ -23,5 +24,9 @@ export default class ApiService {
     image?: string
   ) {
     return $api.post(`/tweets/create`, { avatar, name, username, text, image });
+  }
+
+  static async getUser(id: string) {
+    return $api.get<IUser>(`/users/${id}`);
   }
 }

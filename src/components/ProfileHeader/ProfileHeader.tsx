@@ -15,8 +15,8 @@ interface ProfileHeaderProps extends RouteComponentProps<ParamsData> {
   locationCountry?: string;
   websiteLink?: string;
   dateJoined: string;
-  followingCount: string;
-  followersCount: string;
+  followingCount: number;
+  followersCount: number;
   profileAvatar: string;
   profileBackground: string;
 }

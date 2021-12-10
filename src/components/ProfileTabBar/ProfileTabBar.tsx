@@ -1,31 +1,33 @@
 import { useState } from "react";
 import styles from "./tabbar.module.scss";
-import tweets from "../../tweetsData.json";
 import Tab from "./Tab";
+import { ITweet } from "../../models/ITweet";
 
 type TabBarProps = {
   dataChanger: Function;
+  initialData: ITweet[];
 };
 
-const ProfileTabBar = ({ dataChanger }: TabBarProps) => {
+const ProfileTabBar = ({ dataChanger, initialData }: TabBarProps) => {
   const tabs = [
     {
       name: "Твиты",
-      onclick: () => dataChanger(tweets),
+      onclick: () => dataChanger(initialData),
     },
     {
       name: "Твиты и ответы",
-      onclick: () => dataChanger(tweets),
+      onclick: () => dataChanger(initialData),
     },
     {
       name: "Медиа",
       onclick: () =>
-        dataChanger(tweets.filter((value) => value.image !== undefined)),
+        dataChanger(initialData.filter((value) => value.image !== undefined)),
     },
     {
       name: "Нравится",
-      onclick: () =>
-        dataChanger(tweets.filter((value) => value.liked === true)),
+      onclick: () => {
+        dataChanger(initialData.filter((value) => value.isLiked === true));
+      },
     },
   ];
   const [activeTab, setActiveTab] = useState(0);

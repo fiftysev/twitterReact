@@ -44,7 +44,7 @@ const TweetCreateForm = ({ placeholderText, userAvatar }: TweetFormProps) => {
             className={styles.tweet_button}
             onClick={() => {
               ApiService.sendTweet(
-                "https://cdn.fakercloud.com/avatars/ludwiczakpawel_128.jpg",
+                "https://i.pravatar.cc/300",
                 "Kanye West",
                 "GodDamnYE",
                 text,
