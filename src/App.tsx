@@ -18,7 +18,7 @@ const App = () => {
         <Route path={"/profile"} component={Profile} />
         <Route path={"/register"} component={SignUp} />
         <Route path={"/login"} component={SignIn} />
-        <Route path={"/user/:login"} component={User} />
+        <Route path={"/user/:id"} component={User} />
         <Route path={"/notifications"} component={Notifications} />
         <Route path={"/explore"} component={Explore} />
         <Route path={"/tweets/:id"} component={TweetDetails} />

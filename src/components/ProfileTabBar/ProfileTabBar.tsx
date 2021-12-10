@@ -3,34 +3,44 @@ import styles from "./tabbar.module.scss";
 import Tab from "./Tab";
 import { ITweet } from "../../models/ITweet";
 
+import * as _ from "lodash";
+
 type TabBarProps = {
   dataChanger: Function;
   initialData: ITweet[];
 };
 
 const ProfileTabBar = ({ dataChanger, initialData }: TabBarProps) => {
+  const tweets = _.cloneDeep(initialData);
   const tabs = [
     {
       name: "Твиты",
-      onclick: () => dataChanger(initialData),
+      onclick: () => {
+        return dataChanger(tweets);
+      },
     },
     {
       name: "Твиты и ответы",
-      onclick: () => dataChanger(initialData),
+      onclick: () => {
+        return dataChanger(tweets);
+      },
     },
     {
       name: "Медиа",
-      onclick: () =>
-        dataChanger(initialData.filter((value) => value.image !== undefined)),
+      onclick: () => {
+        return dataChanger(tweets.filter((value) => value.image !== undefined));
+      },
     },
     {
       name: "Нравится",
       onclick: () => {
-        dataChanger(initialData.filter((value) => value.isLiked === true));
+        return dataChanger(tweets.filter((value) => value.isLiked === true));
       },
     },
   ];
+
   const [activeTab, setActiveTab] = useState(0);
+
   const tabItems = tabs.map((value, index) => (
     <Tab
       activeChanger={() => setActiveTab(index)}

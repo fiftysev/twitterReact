@@ -9,7 +9,9 @@ import twitterIcon from "./img/twitter_logo.svg";
 import moreIcon from "./img/more.svg";
 import Sidebar from "./components/Sidebar/Sidebar";
 import ActualSidebar from "./components/ActualSidebar/ActualSidebar";
-import { ReactNode } from "react";
+import { IActualTheme } from "./models/IActualTheme";
+import { ReactNode, useEffect, useState } from "react";
+import ApiService from "./utils/http.service";
 
 const sidebarItems = [
   { elementIcon: homeIcon, elementTitle: "Главная", pathTitle: "/home" },
@@ -34,14 +36,6 @@ const sidebarItems = [
   { elementIcon: moreIcon, elementTitle: "Еще", pathTitle: "/more" },
 ];
 
-const actualSidebarItems = [
-  { category: "Музыка", title: "Juice WRLD", countOfTweets: "127 тыс." },
-  { category: "Знаменитости", title: "Илон Маск", countOfTweets: "7898" },
-  { category: "Тренды", title: "YEEZY" },
-  { category: "Спорт", title: "Майк Тайсон", countOfTweets: "1,83 млн." },
-  { category: "Популярное", title: "Tатарстан" },
-];
-
 type layoutProps = {
   children: ReactNode;
   rightSidebarTitle?: string;
@@ -49,13 +43,21 @@ type layoutProps = {
 };
 
 const Layout = (props: layoutProps) => {
+  const [actualThemes, setActualThemes] = useState<IActualTheme[]>([]);
+
+  useEffect(() => {
+    ApiService.getActual().then((response) => {
+      setActualThemes(response.data);
+    });
+  }, []);
+
   const actualTitle =
     props.rightSidebarTitle === undefined
       ? "Актуальные темы"
       : props.rightSidebarTitle;
   const actualData =
     props.customRightSidebarItems === undefined
-      ? actualSidebarItems
+      ? actualThemes
       : props.customRightSidebarItems;
   return (
     <div className="container">

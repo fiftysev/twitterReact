@@ -3,9 +3,9 @@ import ActualSidebarElement from "./ActualSidebarElement";
 import SearchForm from "./SearchForm";
 
 type ActualElementData = {
-  category?: string;
-  title?: string;
-  countOfTweets?: string;
+  place?: number;
+  tag?: string;
+  mentions?: number;
   userRecName?: string;
   userRecUsername?: string;
   userRecAvatar?: string;
@@ -18,7 +18,7 @@ type ActualSidebarProps = {
 
 const ActualSidebar = ({ actualData, sidebarTitle }: ActualSidebarProps) => {
   const actualElements = actualData.map((value, index) => (
-    <ActualSidebarElement data={value} index={index} key={index} />
+    <ActualSidebarElement data={value} key={index} />
   ));
   return (
     <div className={styles.wrapper}>

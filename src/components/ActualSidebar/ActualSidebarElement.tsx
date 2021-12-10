@@ -3,34 +3,31 @@ import { Link } from "react-router-dom";
 
 type SidebarElementProps = {
   data: {
-    category?: string;
-    title?: string;
-    countOfTweets?: string;
+    place?: number;
+    tag?: string;
+    mentions?: number;
     userRecName?: string;
     userRecUsername?: string;
     userRecAvatar?: string;
   };
-  index: number;
 };
 
-const ActualSidebarElement = ({ data, index }: SidebarElementProps) => (
+const ActualSidebarElement = ({ data }: SidebarElementProps) => (
   <div className={styles.element}>
-    {data.category && (
+    {"Рекомендуем" && (
       <span className={styles.subhead_text}>
-        {index + 1} • {data.category}
+        {data.place} • {"Рекомендуем"}
       </span>
     )}
     {data.userRecAvatar && (
       <img src={data.userRecAvatar} alt="avatar" className={styles.avatar} />
     )}
-    <span className={styles.element_title}>
-      {data.userRecName || data.title}
-    </span>
+    <span className={styles.element_title}>{data.userRecName || data.tag}</span>
     <Link to={`/user/${data.userRecUsername}`} className={styles.subhead_text}>
       {data.userRecUsername && `@${data.userRecUsername}`}
     </Link>
     <span className={styles.subhead_text}>
-      {data.countOfTweets && `Твитов: ${data.countOfTweets}`}
+      {data.mentions && `Твитов: ${data.mentions}`}
     </span>
     {data.userRecName && <button className={styles.follow_btn}>Читать</button>}
   </div>

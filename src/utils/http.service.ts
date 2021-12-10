@@ -1,4 +1,5 @@
 import axios, { AxiosResponse } from "axios";
+import { IActualTheme } from "../models/IActualTheme";
 import { ITweet } from "../models/ITweet";
 import { IUser } from "../models/IUser";
 
@@ -26,7 +27,11 @@ export default class ApiService {
     return $api.post(`/tweets/create`, { avatar, name, username, text, image });
   }
 
-  static async getUser(id: string) {
+  static async getUser(id: string): Promise<AxiosResponse<IUser>> {
     return $api.get<IUser>(`/users/${id}`);
+  }
+
+  static async getActual() {
+    return $api.get<IActualTheme[]>("/api/actual");
   }
 }

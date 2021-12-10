@@ -2,13 +2,9 @@ import DateIcon from "../Icons/DateIcon";
 import LinkIcon from "../Icons/LinkIcon";
 import MapIcon from "../Icons/MapIcon";
 import styles from "./profileheader.module.scss";
-import { RouteComponentProps, withRouter } from "react-router-dom";
 
-interface ParamsData {
-  login: string;
-}
-
-interface ProfileHeaderProps extends RouteComponentProps<ParamsData> {
+interface ProfileHeaderProps {
+  isMyProfile: boolean;
   name?: string;
   username?: string;
   description?: string;
@@ -23,6 +19,7 @@ interface ProfileHeaderProps extends RouteComponentProps<ParamsData> {
 
 const ProfileHeader = (props: ProfileHeaderProps) => {
   const {
+    isMyProfile,
     name,
     username,
     description,
@@ -33,7 +30,6 @@ const ProfileHeader = (props: ProfileHeaderProps) => {
     followersCount,
     profileAvatar,
     profileBackground,
-    match,
   } = props;
   return (
     <div className={styles.container}>
@@ -46,16 +42,13 @@ const ProfileHeader = (props: ProfileHeaderProps) => {
       <img src={profileAvatar} alt="avatar" className={styles.avatar} />
 
       <button className={styles.follow_button}>
-        {match.params.login && <span>Редактировать</span>}{" "}
-        {username && <span>Читать</span>}
+        {isMyProfile && <span>Редактировать</span>}{" "}
+        {!isMyProfile && <span>Читать</span>}
       </button>
 
       <div className={styles.text_container}>
-        <h2 className={styles.name}> {match.params.login || name} </h2>
-        <span className={styles.username}>
-          {" "}
-          @{match.params.login || username}{" "}
-        </span>
+        <h2 className={styles.name}> {name} </h2>
+        <span className={styles.username}> @{username} </span>
         <span className={styles.description}> {description} </span>
 
         <div className={styles.additional_info}>
@@ -92,4 +85,4 @@ const ProfileHeader = (props: ProfileHeaderProps) => {
   );
 };
 
-export default withRouter(ProfileHeader);
+export default ProfileHeader;

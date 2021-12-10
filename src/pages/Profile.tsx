@@ -44,6 +44,7 @@ const Profile: FC = () => {
     <Layout>
       <Feed>
         <ProfileHeader
+          isMyProfile={true}
           name={user.name}
           username={user.username}
           description={user.description}

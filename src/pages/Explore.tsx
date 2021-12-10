@@ -1,61 +1,39 @@
 import "../index";
-import ActualSidebar from "../components/ActualSidebar/ActualSidebar";
 import Feed from "../Feed";
 import Layout from "../Layout";
 import Tweet from "../components/Tweet/Tweet";
 import TweetGroup from "../components/TweetGroup/TweetGroup";
-import tweetsData from "../tweetsData.json";
-
-const userRecItems = [
-  {
-    userRecAvatar: "./img/tweetAuthor.png",
-    userRecName: "GodDamn",
-    userRecUsername: "GodDamn",
-  },
-  {
-    userRecAvatar: "./img/tweetAuthor.png",
-    userRecName: "GodDamn",
-    userRecUsername: "GodDamn",
-  },
-  {
-    userRecAvatar: "./img/tweetAuthor.png",
-    userRecName: "GodDamn",
-    userRecUsername: "GodDamn",
-  },
-  {
-    userRecAvatar: "./img/tweetAuthor.png",
-    userRecName: "GodDamn",
-    userRecUsername: "GodDamn",
-  },
-  {
-    userRecAvatar: "./img/tweetAuthor.png",
-    userRecName: "GodDamn",
-    userRecUsername: "GodDamn",
-  },
-];
-
-const actualSidebarItems = [
-  { category: "Музыка", title: "Juice WRLD", countOfTweets: "127 тыс." },
-  { category: "Знаменитости", title: "Илон Маск", countOfTweets: "7898" },
-  { category: "Тренды", title: "YEEZY" },
-  { category: "Спорт", title: "Майк Тайсон", countOfTweets: "1,83 млн." },
-  { category: "Популярное", title: "Tатарстан" },
-];
+import { ITweet } from "../models/ITweet";
+import { useEffect, useState } from "react";
+import ApiService from "../utils/http.service";
 
 const Explore = () => {
-  const firstGroup = tweetsData.slice(0, 3);
-  const secondGroup = tweetsData.slice(3, 5);
-  const thirdGroup = tweetsData.slice(5);
+  const [firstGroup, setFirstGroup] = useState<ITweet[]>([]);
+  const [secondGroup, setSecondGroup] = useState<ITweet[]>([]);
+  const [thirdGroup, setThirdGroup] = useState<ITweet[]>([]);
+  useEffect(() => {
+    ApiService.getTweets().then((response) => {
+      const firstGroup: ITweet[] = [];
+      const secondGroup: ITweet[] = [];
+      const thirdGroup: ITweet[] = [];
+      response.data.forEach((v, i) => {
+        if (i % 2) {
+          firstGroup.push(v);
+        } else if (i % 3 === 0) {
+          secondGroup.push(v);
+        } else {
+          thirdGroup.push(v);
+        }
+      });
+      setFirstGroup(firstGroup);
+      setSecondGroup(secondGroup);
+      setThirdGroup(thirdGroup);
+    });
+  });
+
   return (
-    <Layout
-      rightSidebarTitle={"Кого читать"}
-      customRightSidebarItems={userRecItems}
-    >
+    <Layout>
       <Feed>
-        <ActualSidebar
-          actualData={actualSidebarItems}
-          sidebarTitle={"Актуальные темы"}
-        />
         <TweetGroup groupTitle="Music">
           {firstGroup.map((value) => (
             <Tweet
@@ -65,11 +43,11 @@ const Explore = () => {
               authorUsername={value.username}
               tweetImage={value.image}
               tweetText={value.text}
-              tweetedTimeAgo={value.timeAgo}
+              tweetedTimeAgo={"19 h."}
               commentsCount={value.comments}
               retweetsCount={value.retweets}
               likesCount={value.likes}
-              isLiked={value.liked}
+              isLiked={value.isLiked}
             />
           ))}
         </TweetGroup>
@@ -82,11 +60,11 @@ const Explore = () => {
               authorUsername={value.username}
               tweetImage={value.image}
               tweetText={value.text}
-              tweetedTimeAgo={value.timeAgo}
+              tweetedTimeAgo={"19 h."}
               commentsCount={value.comments}
               retweetsCount={value.retweets}
               likesCount={value.likes}
-              isLiked={value.liked}
+              isLiked={value.isLiked}
             />
           ))}
         </TweetGroup>
@@ -99,11 +77,11 @@ const Explore = () => {
               authorUsername={value.username}
               tweetImage={value.image}
               tweetText={value.text}
-              tweetedTimeAgo={value.timeAgo}
+              tweetedTimeAgo={"19 h."}
               commentsCount={value.comments}
               retweetsCount={value.retweets}
               likesCount={value.likes}
-              isLiked={value.liked}
+              isLiked={value.isLiked}
             />
           ))}
         </TweetGroup>
