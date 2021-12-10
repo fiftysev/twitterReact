@@ -5,6 +5,7 @@ import ShareIcon from "../Icons/ShareIcon";
 import styles from "./tweet.module.scss";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 import FillLikeIcon from "../Icons/FillLikeIcon";
+import { useState } from "react";
 
 interface ParamsData {
   login: string;
@@ -39,6 +40,7 @@ const Tweet = (props: TweetProps) => {
     match,
     isLiked,
   } = props;
+  const [liked, setLiked] = useState<boolean>(isLiked);
   return (
     <div className={styles.container}>
       <img src={authorAvatar} alt="author" className={styles.avatar} />
@@ -81,11 +83,14 @@ const Tweet = (props: TweetProps) => {
           </div>
 
           <div className={`${styles.action_button} ${styles.like}`}>
-            <div className={`${styles.icon} ${isLiked && styles.liked}`}>
-              {!isLiked && <LikeIcon />}
-              {isLiked && <FillLikeIcon />}
+            <div
+              className={`${styles.icon} ${liked && styles.liked}`}
+              onClick={() => setLiked(!liked)}
+            >
+              {!liked && <LikeIcon />}
+              {liked && <FillLikeIcon />}
             </div>
-            <span className={`${isLiked && styles.liked}`}>{likesCount}</span>
+            <span className={`${liked && styles.liked}`}>{likesCount}</span>
           </div>
 
           <div className={`${styles.action_button} ${styles.share}`}>
