@@ -67,7 +67,8 @@ const ProfileHeader = (props: ProfileHeaderProps) => {
           {dateJoined && (
             <span className={styles.joined_date}>
               {" "}
-              <DateIcon /> Регистрация: {dateJoined}{" "}
+              <DateIcon />
+              {dateJoined}{" "}
             </span>
           )}
         </div>
