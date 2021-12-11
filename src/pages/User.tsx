@@ -1,6 +1,5 @@
 import Feed from "../Feed";
 import ProfileHeader from "../components/ProfileHeader/ProfileHeader";
-import profileBackground from "../img/backgroundProfile.jpeg";
 import Tweet from "../components/Tweet/Tweet";
 import Layout from "../Layout";
 import { useEffect, useState } from "react";
@@ -55,7 +54,7 @@ const User = () => {
           followingCount={user.following}
           followersCount={user.followers}
           profileAvatar={user.avatar}
-          profileBackground={user.background || profileBackground}
+          profileBackground={user.background || ""}
         />
         {Tweets}
       </Feed>

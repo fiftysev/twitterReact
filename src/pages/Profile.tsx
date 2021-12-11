@@ -54,7 +54,7 @@ const Profile: FC = () => {
           followingCount={user.following}
           followersCount={user.followers}
           profileAvatar={user.avatar}
-          profileBackground={user.background || profileBackground}
+          profileBackground={user.background || ""}
         />
         <ProfileTabBar dataChanger={setTweets} initialData={tweets} />
         {Tweets}
